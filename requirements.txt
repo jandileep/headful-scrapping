@@ -1,5 +1,8 @@
-selenium==4.15.2
+selenium
 beautifulsoup4==4.12.2
 requests==2.31.0
-langselect==0.1.10
+langselect
 webdriver-manager==3.8.5
+requests
+bs4
+webdriver-manager
