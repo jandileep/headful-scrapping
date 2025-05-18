@@ -10,7 +10,7 @@ options.set_capability("goog:loggingPrefs", {"performance": "ALL"})
 driver = webdriver.Chrome(options=options)
 
 # Target page
-url = "https://indianculture.gov.in/food-and-culture/evolution-indian-gastronomy/evolution-indian-gastronomy-tale-fusion"
+url = "https://indianculture.gov.in/food-and-culture/cuisines-of-India"
 driver.get(url)
 driver.implicitly_wait(10)
 
