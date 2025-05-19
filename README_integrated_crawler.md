@@ -1,6 +1,6 @@
-# Integrated Web Crawler with Image Extraction
+# Integrated Web Crawler with Image and Video Extraction
 
-This tool combines the functionality of `advanced_crawler.py` and `adv_extract_image.py` to create a comprehensive web scraping system that crawls websites recursively, extracts content, links, and images, and saves them in an organized directory structure.
+This tool combines the functionality of `advanced_crawler.py` and `adv_extract_image.py` to create a comprehensive web scraping system that crawls websites recursively, extracts content, links, images, and videos, and saves them in an organized directory structure.
 
 ## Features
 
@@ -8,6 +8,7 @@ This tool combines the functionality of `advanced_crawler.py` and `adv_extract_i
 - **Content Extraction**: Extracts text content from web pages
 - **Link Extraction**: Extracts links from web pages
 - **Image Extraction**: Extracts images from web pages
+- **Video Extraction**: Extracts videos from web pages
 - **Organized Output**: Saves results in a structured directory hierarchy
 - **Robots.txt Compliance**: Respects robots.txt directives
 - **Rate Limiting**: Implements delays between requests to prevent server overload
@@ -19,11 +20,15 @@ For each crawled URL, the tool creates a directory structure like this:
 
 ```
 url_slug/
-├── output_content.json  # Contains page content and image metadata
+├── output_content.json  # Contains page content, image and video metadata
 ├── output_links.json    # Contains links found on the page
-└── images/              # Contains downloaded images
-    ├── image1.jpg
-    ├── image2.png
+├── images/              # Contains downloaded images
+│   ├── image1.jpg
+│   ├── image2.png
+│   └── ...
+└── video/               # Contains downloaded videos
+    ├── video1.mp4
+    ├── video2.webm
     └── ...
 ```
 
@@ -35,10 +40,14 @@ root_url_slug/
 ├── output_links.json
 ├── images/
 │   └── ...
+├── video/
+│   └── ...
 └── linked_page_slug/
     ├── output_content.json
     ├── output_links.json
-    └── images/
+    ├── images/
+    │   └── ...
+    └── video/
         └── ...
 ```
 
@@ -94,6 +103,16 @@ python integrated_crawler.py --dedupe-file input.json --output output.json
       "local_path": "example_com/images/image1.jpg"
     },
     ...
+  ],
+  "videos": [
+    {
+      "url": "https://example.com/videos/video1.mp4",
+      "filename": "video1.mp4",
+      "size_bytes": 1234567,
+      "content_type": "video/mp4",
+      "local_path": "example_com/video/video1.mp4"
+    },
+    ...
   ]
 }
 ```
@@ -143,7 +162,8 @@ This tool integrates the following components:
 
 1. **WebsiteCrawler** from `combined_crawler.py`: Handles basic crawling functionality
 2. **ImageExtractor**: Extracts images from web pages using both network logs and HTML parsing
-3. **IntegratedCrawler**: Orchestrates the crawling process, including recursive crawling and image extraction
+3. **VideoExtractor**: Extracts videos from web pages using both network logs and HTML parsing
+4. **IntegratedCrawler**: Orchestrates the crawling process, including recursive crawling, image and video extraction
 
 ## Error Handling
 
@@ -162,6 +182,7 @@ Errors are logged to both the console and a log file (`integrated_crawler.log`).
 - Some websites may block automated crawling
 - Large websites may take a long time to crawl completely
 - Image extraction may not work for all types of images (e.g., those loaded via JavaScript)
+- Video extraction may not work for all types of videos (e.g., streaming videos or those with DRM protection)
 
 ## License
 
