@@ -1,21 +1,27 @@
 #!/usr/bin/env python3
 """
-Integrated Web Crawler with Image Extraction
+Integrated HTML Crawler
 
-This script combines the functionality of aawler.py and adv_extract_image.py to:
+This script combines the functionality of extract_content.py with web crawling to:
 1. Crawl websites recursively and extract content and links
-2. Extract images from each crawled website
-3. Save content to output_content.json with image metadata
+2. Extract structured HTML content including paragraphs and images
+3. Save content to output_content.json with the following format:
+   - paragraph-content
+   - image url
+   - local path of image
+   - title
+   - content_type
+   - caption (extracted from figcaption, aria-label, data-caption, or alt text)
 4. Save links to output_links.json
 5. Save images to an "images" subfolder
 6. Respect robots.txt and implement rate limiting
 
 Usage:
     # For recursive crawling with default settings:
-    python integrated_crawler.py <url> [--headless] [--max-depth=2] [--delay=3]
+    python integrated_crawler_html.py <url> [--headless] [--max-depth=2] [--delay=3]
     
     # For deduplicating links in an existing JSON file:
-    python integrated_crawler.py --dedupe-file <input_file> [<output_file>]
+    python integrated_crawler_html.py --dedupe-file <input_file> [<output_file>]
 """
 
 import argparse
@@ -24,24 +30,24 @@ import sys
 from combined_crawler import dedupe_command
 
 # Import the crawler module
-from crawler import IntegratedCrawler
+from crawler_html import HtmlCrawler
 
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("integrated_crawler.log"),
+        logging.FileHandler("integrated_crawler_html.log"),
         logging.StreamHandler(sys.stdout)
     ]
 )
 
-logger = logging.getLogger("IntegratedCrawler")
+logger = logging.getLogger("IntegratedHtmlCrawler")
 
 def main():
-    """Main entry point for the integrated crawler script"""
+    """Main entry point for the integrated HTML crawler script"""
     parser = argparse.ArgumentParser(
-        description="Integrated Web Crawler with Image Extraction",
+        description="Integrated HTML Crawler",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__
     )
@@ -72,7 +78,7 @@ def main():
         dedupe_command(dedupe_args)
     elif args.url:
         # Handle recursive crawling
-        crawler = IntegratedCrawler(
+        crawler = HtmlCrawler(
             max_depth=args.max_depth,
             delay=args.delay,
             headless=args.headless,
