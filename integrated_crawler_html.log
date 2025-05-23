@@ -1,0 +1,109 @@
+2025-05-22 22:45:53,877 - HtmlCrawler - INFO - Initialized HtmlCrawler with max_depth=2, delay=3s
+2025-05-22 22:45:53,877 - HtmlCrawler - INFO - Starting recursive crawling from URL: https://indianculture.gov.in/food-and-culture
+2025-05-22 22:45:53,877 - HtmlCrawler - INFO - Maximum depth: 2, Delay between requests: 3s
+2025-05-22 22:45:54,100 - HtmlCrawler - INFO - Crawling URL: https://indianculture.gov.in/food-and-culture (Depth: 0/2)
+2025-05-22 22:45:54,100 - WDM - INFO - ====== WebDriver manager ======
+2025-05-22 22:45:54,311 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-22 22:45:54,443 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-22 22:45:54,478 - WDM - INFO - Driver [/Users/jananidileepan/.wdm/drivers/chromedriver/mac64/136.0.7103.113/chromedriver-mac-arm64/chromedriver] found in cache
+2025-05-22 22:45:58,055 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102a522d0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/fc351dec2b39233e31068e8b031c3f37
+2025-05-22 22:45:58,056 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102a52950>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/fc351dec2b39233e31068e8b031c3f37
+2025-05-22 22:45:58,057 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x102a52f50>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/fc351dec2b39233e31068e8b031c3f37
+2025-05-22 22:46:06,619 - HtmlCrawler - INFO - Initialized HtmlCrawler with max_depth=2, delay=3s
+2025-05-22 22:46:06,619 - HtmlCrawler - INFO - Starting recursive crawling from URL: https://indianculture.gov.in/food-and-culture
+2025-05-22 22:46:06,619 - HtmlCrawler - INFO - Maximum depth: 2, Delay between requests: 3s
+2025-05-22 22:46:07,034 - HtmlCrawler - INFO - Crawling URL: https://indianculture.gov.in/food-and-culture (Depth: 0/2)
+2025-05-22 22:46:07,035 - WDM - INFO - ====== WebDriver manager ======
+2025-05-22 22:46:07,294 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-22 22:46:07,687 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-22 22:46:07,817 - WDM - INFO - Driver [/Users/jananidileepan/.wdm/drivers/chromedriver/mac64/136.0.7103.113/chromedriver-mac-arm64/chromedriver] found in cache
+2025-05-22 22:46:22,664 - HtmlCrawler - INFO - Output folder: Food_and_Culture
+2025-05-22 22:46:22,665 - HtmlCrawler - INFO - Extracting HTML content from https://indianculture.gov.in/food-and-culture
+2025-05-22 22:46:24,615 - HtmlContentExtractor - INFO - Extracting content from page...
+2025-05-22 22:46:28,328 - HtmlCrawler - INFO - Extracted 0 paragraphs and 0 images
+2025-05-22 22:46:28,428 - HtmlCrawler - INFO - Results saved in directory: Food_and_Culture/
+2025-05-22 22:46:28,429 - HtmlCrawler - INFO - Parsed 7 valid URLs from Food_and_Culture/output_links.json
+2025-05-22 22:46:28,429 - HtmlCrawler - INFO - Processing link 1/7 from https://indianculture.gov.in/food-and-culture
+2025-05-22 22:46:28,429 - HtmlCrawler - INFO - Crawling URL: https://indianculture.gov.in/node/2681807 (Depth: 1/2)
+2025-05-22 22:46:28,429 - WDM - INFO - ====== WebDriver manager ======
+2025-05-22 22:46:28,647 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-22 22:46:28,681 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-22 22:46:28,717 - WDM - INFO - Driver [/Users/jananidileepan/.wdm/drivers/chromedriver/mac64/136.0.7103.113/chromedriver-mac-arm64/chromedriver] found in cache
+2025-05-22 22:46:43,792 - HtmlCrawler - INFO - Output folder: Food_and_Culture/Evolution_of_Indian_Gastronomy
+2025-05-22 22:46:43,794 - HtmlCrawler - INFO - Extracting HTML content from https://indianculture.gov.in/node/2681807
+2025-05-22 22:46:51,522 - HtmlContentExtractor - INFO - Extracting content from page...
+2025-05-22 22:46:51,597 - HtmlContentExtractor - INFO - Downloading image: https://indianculture.gov.in/sites/default/files/inline-images/cuisine-food-india-indian-wallpaper-preview.jpg
+2025-05-22 22:46:51,817 - HtmlContentExtractor - INFO - ✅ Saved as: cuisine-food-india-indian-wallpaper-preview.jpg
+2025-05-22 22:46:51,818 - HtmlContentExtractor - INFO - Downloading image: https://indianculture.gov.in/sites/default/files/inline-images/evolution-2.png
+2025-05-22 22:46:52,047 - HtmlContentExtractor - INFO - ✅ Saved as: evolution-2.png
+2025-05-22 22:46:52,047 - HtmlContentExtractor - INFO - Downloading image: https://indianculture.gov.in/sites/default/files/inline-images/evolution-2-1.png
+2025-05-22 22:46:52,260 - HtmlContentExtractor - INFO - ✅ Saved as: evolution-2-1.png
+2025-05-22 22:46:52,261 - HtmlContentExtractor - INFO - Downloading image: https://indianculture.gov.in/sites/default/files/inline-images/evolution-2-2.png
+2025-05-22 22:46:52,467 - HtmlContentExtractor - INFO - ✅ Saved as: evolution-2-2.png
+2025-05-22 22:46:52,467 - HtmlContentExtractor - INFO - Downloading image: https://indianculture.gov.in/sites/default/files/inline-images/evolution-2-3.jpg
+2025-05-22 22:46:52,722 - HtmlContentExtractor - INFO - ✅ Saved as: evolution-2-3.jpg
+2025-05-22 22:46:52,723 - HtmlContentExtractor - INFO - Downloading image: https://indianculture.gov.in/sites/default/files/inline-images/evolution-2-4.jpg
+2025-05-22 22:46:52,968 - HtmlContentExtractor - INFO - ✅ Saved as: evolution-2-4.jpg
+2025-05-22 22:46:52,968 - HtmlContentExtractor - INFO - Downloading image: https://indianculture.gov.in/sites/default/files/inline-images/Indo-Roman_trade.jpg
+2025-05-22 22:46:53,208 - HtmlContentExtractor - INFO - ✅ Saved as: Indo-Roman_trade.jpg
+2025-05-22 22:46:53,208 - HtmlContentExtractor - INFO - Downloading image: https://indianculture.gov.in/sites/default/files/inline-images/evolution-4_0.jpg
+2025-05-22 22:46:53,514 - HtmlContentExtractor - INFO - ✅ Saved as: evolution-4_0.jpg
+2025-05-22 22:46:53,515 - HtmlContentExtractor - INFO - Downloading image: https://indianculture.gov.in/sites/default/files/inline-images/evolution-5.jpg
+2025-05-22 22:46:53,786 - HtmlContentExtractor - INFO - ✅ Saved as: evolution-5.jpg
+2025-05-22 22:46:53,787 - HtmlContentExtractor - INFO - Downloading image: https://indianculture.gov.in/sites/default/files/inline-images/evolution-6.jpg
+2025-05-22 22:46:54,112 - HtmlContentExtractor - INFO - ✅ Saved as: evolution-6.jpg
+2025-05-22 22:46:54,112 - HtmlContentExtractor - INFO - Downloading image: https://indianculture.gov.in/sites/default/files/inline-images/evolution-7.jpg
+2025-05-22 22:46:54,418 - HtmlContentExtractor - INFO - ✅ Saved as: evolution-7.jpg
+2025-05-22 22:46:54,418 - HtmlContentExtractor - INFO - Downloading image: https://indianculture.gov.in/sites/default/files/inline-images/Sweets_1.jpg
+2025-05-22 22:46:54,630 - HtmlContentExtractor - INFO - ✅ Saved as: Sweets_1.jpg
+2025-05-22 22:46:54,630 - HtmlContentExtractor - INFO - Downloading image: https://indianculture.gov.in/sites/default/files/inline-images/nimatnama.jpg
+2025-05-22 22:46:54,853 - HtmlContentExtractor - INFO - ✅ Saved as: nimatnama.jpg
+2025-05-22 22:46:54,853 - HtmlContentExtractor - INFO - Downloading image: https://indianculture.gov.in/sites/default/files/inline-images/evolution-8.jpg
+2025-05-22 22:46:55,136 - HtmlContentExtractor - INFO - ✅ Saved as: evolution-8.jpg
+2025-05-22 22:46:55,136 - HtmlContentExtractor - INFO - Downloading image: https://indianculture.gov.in/sites/default/files/inline-images/evolution-9.jpg
+2025-05-22 22:46:55,422 - HtmlContentExtractor - INFO - ✅ Saved as: evolution-9.jpg
+2025-05-22 22:46:55,422 - HtmlContentExtractor - INFO - Downloading image: https://indianculture.gov.in/sites/default/files/inline-images/evolution-10.jpg
+2025-05-22 22:46:55,691 - HtmlContentExtractor - INFO - ✅ Saved as: evolution-10.jpg
+2025-05-22 22:46:55,692 - HtmlCrawler - INFO - Extracted 50 paragraphs and 16 images
+2025-05-22 22:46:55,787 - HtmlCrawler - INFO - Results saved in directory: Food_and_Culture/Evolution_of_Indian_Gastronomy/
+2025-05-22 22:46:55,788 - HtmlCrawler - INFO - Parsed 0 valid URLs from Food_and_Culture/Evolution_of_Indian_Gastronomy/output_links.json
+2025-05-22 22:46:55,894 - HtmlCrawler - INFO - Processing link 2/7 from https://indianculture.gov.in/food-and-culture
+2025-05-22 22:46:55,894 - HtmlCrawler - INFO - Waiting 3 seconds before next request...
+2025-05-22 22:46:58,902 - HtmlCrawler - INFO - Crawling URL: https://indianculture.gov.in/node/2681808 (Depth: 1/2)
+2025-05-22 22:46:58,906 - WDM - INFO - ====== WebDriver manager ======
+2025-05-22 22:46:59,644 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-22 22:46:59,675 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-22 22:46:59,703 - WDM - INFO - Driver [/Users/jananidileepan/.wdm/drivers/chromedriver/mac64/136.0.7103.113/chromedriver-mac-arm64/chromedriver] found in cache
+2025-05-22 22:47:14,358 - HtmlCrawler - INFO - Output folder: Food_and_Culture/Cuisines_of_India
+2025-05-22 22:47:14,360 - HtmlCrawler - INFO - Extracting HTML content from https://indianculture.gov.in/node/2681808
+2025-05-22 22:47:21,319 - HtmlContentExtractor - INFO - Extracting content from page...
+2025-05-22 22:47:21,540 - HtmlCrawler - INFO - Extracted 0 paragraphs and 0 images
+2025-05-22 22:47:21,735 - HtmlCrawler - INFO - Results saved in directory: Food_and_Culture/Cuisines_of_India/
+2025-05-22 22:47:21,735 - HtmlCrawler - INFO - Parsed 8 valid URLs from Food_and_Culture/Cuisines_of_India/output_links.json
+2025-05-22 22:47:21,735 - HtmlCrawler - INFO - Processing link 1/8 from https://indianculture.gov.in/node/2681808
+2025-05-22 22:47:21,735 - HtmlCrawler - INFO - Crawling URL: https://indianculture.gov.in/node/2681812 (Depth: 2/2)
+2025-05-22 22:47:21,735 - WDM - INFO - ====== WebDriver manager ======
+2025-05-22 22:47:22,105 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-22 22:47:22,149 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-22 22:47:22,177 - WDM - INFO - Driver [/Users/jananidileepan/.wdm/drivers/chromedriver/mac64/136.0.7103.113/chromedriver-mac-arm64/chromedriver] found in cache
+2025-05-22 22:47:38,209 - HtmlCrawler - INFO - Output folder: Food_and_Culture/Cuisines_of_India/North
+2025-05-22 22:47:38,210 - HtmlCrawler - INFO - Extracting HTML content from https://indianculture.gov.in/node/2681812
+2025-05-22 22:47:44,525 - HtmlContentExtractor - INFO - Extracting content from page...
+2025-05-22 22:47:44,837 - HtmlCrawler - INFO - Extracted 0 paragraphs and 0 images
+2025-05-22 22:47:44,956 - HtmlCrawler - INFO - Results saved in directory: Food_and_Culture/Cuisines_of_India/North/
+2025-05-22 22:47:45,064 - HtmlCrawler - INFO - Processing link 2/8 from https://indianculture.gov.in/node/2681808
+2025-05-22 22:47:45,064 - HtmlCrawler - INFO - Waiting 3 seconds before next request...
+2025-05-22 22:47:48,068 - HtmlCrawler - INFO - Crawling URL: https://indianculture.gov.in/node/2681813 (Depth: 2/2)
+2025-05-22 22:47:48,071 - WDM - INFO - ====== WebDriver manager ======
+2025-05-22 22:47:48,404 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-22 22:47:48,535 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-22 22:47:48,684 - WDM - INFO - Driver [/Users/jananidileepan/.wdm/drivers/chromedriver/mac64/136.0.7103.113/chromedriver-mac-arm64/chromedriver] found in cache
+2025-05-22 22:48:03,298 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1046ad150>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/ee3a3520e99c308d369bfd9a43c71540
+2025-05-22 22:48:03,306 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1046ad5d0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/ee3a3520e99c308d369bfd9a43c71540
+2025-05-22 22:48:03,307 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1046ae3d0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/ee3a3520e99c308d369bfd9a43c71540
+2025-05-22 22:48:03,313 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1044dca10>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/7a20fc3f1a33e2b1c0a597f907cd1c10
+2025-05-22 22:48:03,314 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1046af4d0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/7a20fc3f1a33e2b1c0a597f907cd1c10
+2025-05-22 22:48:03,314 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1046afb10>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/7a20fc3f1a33e2b1c0a597f907cd1c10
+2025-05-22 22:48:03,317 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x104280110>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/705e292111d37fdffa3a7e062a957a24
+2025-05-22 22:48:03,318 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1046a9410>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/705e292111d37fdffa3a7e062a957a24
+2025-05-22 22:48:03,318 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1046a87d0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/705e292111d37fdffa3a7e062a957a24
