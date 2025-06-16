@@ -10,7 +10,7 @@ import os
 import re
 import json
 import time
-import logfire as logger
+import logging as logger
 import sys
 from urllib.error import URLError, HTTPError
 from urllib.robotparser import RobotFileParser

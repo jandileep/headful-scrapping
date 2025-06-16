@@ -6,7 +6,7 @@ This module provides the HtmlContentExtractor class for extracting structured co
 """
 
 import os
-import logfire as logger
+import logging  as logger
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse, urljoin
