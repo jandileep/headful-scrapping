@@ -3,10 +3,9 @@
 Digital Repo Image Extractor – v2.5
 
 Key changes
-───────────
-• Accepts images whose URL path contains **/paintingimage/** or **/digirepo/**
-  (unchanged) **or /digitalfilesicweb/** (v2.4)
-• NEW (v2.5): Detects canonical image URLs declared in the page head via
+─────────────────
+• Accepts images whose URL path contains **/paintingimage/** or **/digirepo/**  (unchanged) **or /digitalfilesicweb/** (v2.4)
+• NEW (v2.5): Detects canonical image URLs declared in the page head via
   `<meta property="og:image" …>` or `<link rel="image_src" …>` (plus
   `twitter:image`) so that those images are also downloaded when they match
   the `_ALLOWED_PATH_KEYS` rules.
@@ -45,7 +44,7 @@ class DigitalRepoImageExtractor(MediaExtractor):
     """
     Downloads every image whose URL path contains any element of
     `_ALLOWED_PATH_KEYS` (case‑insensitive) and passes the usual
-    MediaExtractor filters.  If *repo_id* is supplied, the stricter
+    MediaExtractor filters.  If *repo_id* is supplied, the stricter
     “…/digirepo/<repo_id>/…” rule is enforced **only** for digirepo paths.
     """
 
@@ -106,7 +105,7 @@ class DigitalRepoImageExtractor(MediaExtractor):
 
 
     def _collect_from_soup(self, soup: BeautifulSoup, found: set[str]):
-        """DOM scan for <img>, <source>, lazy‑load attrs, and canonical tags."""
+        """DOM scan for <img>, <source>, lazy‑load attrs, canonical tags—and gallery anchors."""
 
         def add(candidate: str):
             abs_u = urljoin(self.url, candidate)
@@ -132,7 +131,6 @@ class DigitalRepoImageExtractor(MediaExtractor):
                     add(item.strip().split()[0])
 
         # ②  Canonical/Open‑Graph/Twitter image declarations
-        #     <meta property="og:image" content="…"> etc.
         for tag in soup.find_all("meta", attrs={"property": "og:image"}):
             if (content := tag.get("content")):
                 add(content)
@@ -147,6 +145,13 @@ class DigitalRepoImageExtractor(MediaExtractor):
                 if (href := tag.get("href")):
                     add(href)
 
+        # ── NEW ──
+        # ④  Gallery anchors inside <div class="row">
+        for div in soup.find_all("div", class_="row"):
+            for a in div.find_all("a", attrs={"data-magnify": "gallery"}):
+                if (href := a.get("href")):
+                    add(href)
+
     # ─────────────────── main entrypoint ────────────────────
     def crawl(self, *, headless: bool = True):
         """
@@ -158,7 +163,6 @@ class DigitalRepoImageExtractor(MediaExtractor):
             self.download_media(self._seed_urls)
             return
 
-        # ---------- original Selenium pathway ----------
         from selenium import webdriver
         from selenium.webdriver.chrome.options import Options
 
@@ -179,7 +183,7 @@ class DigitalRepoImageExtractor(MediaExtractor):
             # 1️⃣  DevTools network log
             for entry in driver.get_log("performance"):
                 try:
-                    msg = json.loads(entry["message"])["message"]
+                    msg = json.loads(entry["message"]) ["message"]
                     if msg["method"] == "Network.responseReceived":
                         u = msg["params"]["response"]["url"]
                         if self._path_ok(urlparse(u).path):
