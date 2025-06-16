@@ -6,12 +6,10 @@ This module provides the HtmlContentExtractor class for extracting structured co
 """
 
 import os
-import logging
+import logfire as logger
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse, urljoin
-
-logger = logging.getLogger("HtmlContentExtractor")
 
 class HtmlContentExtractor:
     """Class to handle HTML content extraction from websites"""

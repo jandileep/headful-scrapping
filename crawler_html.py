@@ -10,7 +10,7 @@ import os
 import re
 import json
 import time
-import logging
+import logfire as logger
 import sys
 from urllib.error import URLError, HTTPError
 from urllib.robotparser import RobotFileParser
@@ -24,9 +24,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 # Import from other modules
 from combined_crawler import WebsiteCrawler, dedupe_links, extract_slug_from_url
 from html_content_extractor import HtmlContentExtractor
-
-# Configure logging
-logger = logging.getLogger("HtmlCrawler")
 
 
 class HtmlCrawler:

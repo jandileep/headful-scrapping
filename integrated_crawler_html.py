@@ -25,24 +25,15 @@ Usage:
 """
 
 import argparse
-import logging
 import sys
+import logfire
 from combined_crawler import dedupe_command
 
 # Import the crawler module
 from crawler_html import HtmlCrawler
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler("integrated_crawler_html.log"),
-        logging.StreamHandler(sys.stdout)
-    ]
-)
-
-logger = logging.getLogger("IntegratedHtmlCrawler")
+# Configure logfire
+logfire.configure()
 
 def main():
     """Main entry point for the integrated HTML crawler script"""
@@ -70,7 +61,7 @@ def main():
     args = parser.parse_args()
     
     # Set logging level
-    logging.getLogger().setLevel(getattr(logging, args.log_level))
+    logfire.configure()
     
     if args.dedupe_file:
         # Handle deduplication of an existing file (reusing from combined_crawler.py)

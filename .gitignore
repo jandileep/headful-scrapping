@@ -11,3 +11,7 @@ __pycache__/
 
 google-chrome-stable_current_amd64.deb
 *.log
+
+.venv
+
+Museum_Paintings

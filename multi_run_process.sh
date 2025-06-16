@@ -12,7 +12,7 @@
 set -euo pipefail
 
 SCRIPT="integrated_crawler_html.py"
-MAX_JOBS=32             # adjust if you have fewer logical cores
+MAX_JOBS=2             # adjust if you have fewer logical cores
 
 # -----------------------------------------------------------------------------
 # Helper: run one crawl in the background while limiting concurrency
