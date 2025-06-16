@@ -1,0 +1,13 @@
+Indian_Culture_Website
+artefacts-museums
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+*.bak         
+
+google-chrome-stable_current_amd64.deb
+*.log
